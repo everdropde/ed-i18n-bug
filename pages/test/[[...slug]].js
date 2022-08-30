@@ -25,12 +25,16 @@ export const getStaticProps = async (props) => {
 
 const Component = () => {
   const router = useRouter()
-  const { q, slug = [], locale } = router.query
+
+  const {
+    query: { slug = [] },
+    locale,
+  } = router
   const { t } = useTranslation('common')
 
   return (
     <>
-      Text depdending on locale should be here - Title:{' '}
+      Text depdending on locale should be here - should not be "title": {' '}
       <span style={{ color: 'red', marginTop: '20px' }}>{t('title')}</span>
       <p>The url query params are: {slug}</p>
       <p>Your locale is: {locale}</p>
