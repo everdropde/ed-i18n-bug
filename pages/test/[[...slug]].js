@@ -22,7 +22,7 @@ export const getStaticProps = async (props) => {
     revalidate: 300,
   }
 }
-
+//useless comment
 const Component = () => {
   const router = useRouter()
 
