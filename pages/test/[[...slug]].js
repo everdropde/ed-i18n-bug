@@ -5,8 +5,8 @@ import { useRouter } from 'next/router'
 export const getStaticPaths = async () => {
   return {
     paths: [
-      { params: { slug: ['prebuild-en'] }, locale: 'en' },
-      { params: { slug: ['prebuild-de'] }, locale: 'de' },
+      { params: { slug: ['prebuild'] }, locale: 'en' },
+      { params: { slug: ['prebuild'] }, locale: 'de' },
     ],
     fallback: 'blocking',
   }
@@ -25,7 +25,7 @@ export const getStaticProps = async (props) => {
 
 const Component = () => {
   const router = useRouter()
-  const { q, slug = [] } = router.query
+  const { q, slug = [], locale } = router.query
   const { t } = useTranslation('common')
 
   return (
@@ -33,6 +33,7 @@ const Component = () => {
       Text depdending on locale should be here - Title:{' '}
       <span style={{ color: 'red', marginTop: '20px' }}>{t('title')}</span>
       <p>The url query params are: {slug}</p>
+      <p>Your locale is: {locale}</p>
     </>
   )
 }
