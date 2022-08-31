@@ -22,7 +22,7 @@ const Home = () => {
         <li>
           <Link href="test/prebuild/random-stuff">
             <a>
-              I am a randrom route the triggers the catch all page text/[[...slug]] - does not change current locale
+              I am a randrom route that triggers the catch all page text/[[...slug]] - does not change current locale
             </a>
           </Link>
         </li>
