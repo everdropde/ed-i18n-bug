@@ -31,29 +31,32 @@ const Component = () => {
   } = router
   const { t } = useTranslation('common')
 
-  const expected_result = {
+  const translations = {
     en: 'I am an english translation',
     de: 'Ich bin eine deutsche Übersetzung',
   }
+
+  const color =
+    translations[locale] === t('this_is_the_translation_key') ? 'green' : 'red'
 
   return (
     <>
       <h1>Your locale is: {locale}</h1>
       <p>
         Expected result of the translated string should be:{' '}
-        <span style={{ color: 'red', marginTop: '20px' }}>
-          {expected_result[locale]}
+        <span style={{ color: color, marginTop: '20px' }}>
+          {translations[locale]}
         </span>
       </p>
       <p>
         Observed result based on i18n is:{' '}
-        <span style={{ color: 'red', marginTop: '20px' }}>
+        <span style={{ color: color, marginTop: '10px' }}>
           {t('this_is_the_translation_key')}
         </span>
       </p>
-      <p>The url query params are: {slug}</p>
-      <p style={{ color: 'blue', fontSize: '16px', fontWeight: 'bold' }}>
-        If you see the correct translation instead the key: <br />
+      <p style={{ color: 'red', fontSize: '16px', fontWeight: 'bold' }}>
+        <b>Attention:</b>If you see the correct translation instead the key:{' '}
+        <br />
         Reload the current page or use browser back and switch a few times
         between locale version. It will break than.
       </p>
