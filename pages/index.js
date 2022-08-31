@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Home = () => {
   return (
     <div>
-      <h1>Please navigate to "/test/xxx" and click back and forth on this navigation</h1>
+      <h1>Navigate to any of the following links</h1>
       <h2>These two links/contents should be prebuild:</h2>
       <ul>
         <li>
@@ -21,7 +21,9 @@ const Home = () => {
       <ul>
         <li>
           <Link href="test/prebuild/random-stuff">
-            <a>I am a randrom route the triggers the catch all page text/[[...slug]] - does not change current locale</a>
+            <a>
+              I am a randrom route the triggers the catch all page text/[[...slug]] - does not change current locale
+            </a>
           </Link>
         </li>
       </ul>
