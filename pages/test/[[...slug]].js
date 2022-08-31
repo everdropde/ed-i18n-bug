@@ -54,12 +54,14 @@ const Component = () => {
           {t('this_is_the_translation_key')}
         </span>
       </p>
-      <p style={{ color: 'red', fontSize: '16px', fontWeight: 'bold' }}>
-        <b>Attention:</b>If you see the correct translation instead the key:{' '}
-        <br />
-        Reload the current page or use browser back and switch a few times
-        between locale version. It will break than.
-      </p>
+      {color === 'green' ? (
+        <p style={{ color: 'red', fontSize: '16px', fontWeight: 'bold' }}>
+          <b>Attention:</b>
+          <br />
+          Reload the current page or use browser back and switch a few times
+          between locale version.
+        </p>
+      ) : null}
     </>
   )
 }
