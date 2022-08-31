@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Home = () => {
   return (
     <div>
-      <h1>Please navigate to "/test/xxx"</h1>
+      <h1>Please navigate to "/test/xxx" and click back and forth on this navigation</h1>
       <h2>These two links/contents should be prebuild:</h2>
       <ul>
         <li>
