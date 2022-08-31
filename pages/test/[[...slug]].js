@@ -37,8 +37,9 @@ const Component = () => {
       <span style={{ color: 'red', marginTop: '20px' }}>{t('this_is_the_translation_key')}</span>
       <p>The url query params are: {slug}</p>
       <p>Your locale is: {locale}</p>
-      <p>
-        If you see the correct translation instead the key: Reload the page or use browser back and navigate to it again
+      <p style={{ color: 'blue', fontSize: '16px', fontWeight: 'bold' }}>
+        If you see the correct translation instead the key: <br />
+        Reload the current page or use browser back and switch a few times between locale version. It will break than.
       </p>
     </>
   )
