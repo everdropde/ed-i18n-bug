@@ -22,7 +22,6 @@ export const getStaticProps = async (props) => {
     revalidate: 300,
   }
 }
-//useless comment
 const Component = () => {
   const router = useRouter()
 
@@ -34,8 +33,8 @@ const Component = () => {
 
   return (
     <>
-      Text depdending on locale should be here - should not be "title": {' '}
-      <span style={{ color: 'red', marginTop: '20px' }}>{t('title')}</span>
+      Text depdending on locale should be here - should not be "this_is_the_translation_key":{' '}
+      <span style={{ color: 'red', marginTop: '20px' }}>{t('this_is_the_translation_key')}</span>
       <p>The url query params are: {slug}</p>
       <p>Your locale is: {locale}</p>
     </>
